@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ include "chart.fullname" . }}-filebrowser-config
+  name: {{ .Values.service.name}}-filebrowser-config
   labels:
-    {{- include "chart.labels" . | nindent 4 }}
+    app: {{ .Values.service.name}}
 data:
   filebrowser.json: |
     {
