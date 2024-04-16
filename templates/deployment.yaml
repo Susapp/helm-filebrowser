@@ -21,7 +21,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: FB_BASEURL
-              value: /filebrowser-service
+              value: /filebrowser-demo-service
             - name: FB_CONFIG
               value: "/etc/filebrowser/filebrowser.json"
           volumeMounts:
