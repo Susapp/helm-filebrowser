@@ -3,7 +3,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: {{ .Values.service.name }}
-  namespace: {{ .Release.Namespace }}
+  namespace: {{ .Values.release.namespace }}
 spec:
   accessModes:
     - {{ .Values.persistence.accessMode }}

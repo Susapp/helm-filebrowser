@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata: ##Blocks all traffic in the namespace
   name: default-deny-all
-  namespace: {{ .Release.Namespace }}
+  namespace: {{ .Values.release.namespace }}
 spec:
   podSelector: {}
   policyTypes:
@@ -14,7 +14,7 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: allow-{{ .Values.service.name}}-ingress
-  namespace: {{ .Release.Namespace }}
+  namespace: {{ .Values.release.namespace }}
 spec:
   podSelector:
     matchLabels:

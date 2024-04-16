@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ .Values.service.name }}-service
-  namespace: {{ .Release.Namespace }}
+  namespace: {{ .Values.release.namespace }}
   labels:
     app: {{ .Values.service.name }}
     role: "frontend"

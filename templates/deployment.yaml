@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Values.service.name }}
-  namespace: {{ .Release.Namespace }}
+  namespace: {{ .Values.release.namespace }}
   labels:
     role: "frontend"
 spec:
