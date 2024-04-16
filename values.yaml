@@ -1,0 +1,14 @@
+image:
+  repository: filebrowser/filebrowser
+  pullPolicy: IfNotPresent
+  tag: "v2-s6@sha256:8309d94cfbdc9fb20fc27b0a8e594925e99fa9ac8a4c5806702fe7518782dcc6"
+
+service:
+  name: filebrowser
+  type: ClusterIP
+  port: 80
+
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 2Gi
