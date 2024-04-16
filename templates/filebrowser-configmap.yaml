@@ -9,6 +9,7 @@ data:
   filebrowser.json: |
     {
       "branding": {
-        "themes": "dark"
+        "files": "/branding",
+        "name": "SmartBrick"
       }
     }
