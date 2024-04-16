@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "chart.fullname" . }}-filebrowser-config
+  labels:
+    {{- include "chart.labels" . | nindent 4 }}
+data:
+  filebrowser.json: |
+    {
+      "branding": {
+        "files": "/branding",
+        "disableExternal": true
+      }
+    }
