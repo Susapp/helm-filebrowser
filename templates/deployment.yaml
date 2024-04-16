@@ -42,7 +42,7 @@ spec:
             claimName: {{ .Values.service.name}}
         - name: custom-css
           configMap:
-            name: {{ include "chart.fullname" . }}-custom-css
+            name: {{ .Values.service.name }}-custom-css
         - name: filebrowser-config
           configMap:
-            name: {{ include "chart.fullname" . }}-filebrowser-config
+            name: {{ .Values.service.name }}-filebrowser-config
