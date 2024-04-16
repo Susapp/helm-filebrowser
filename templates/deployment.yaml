@@ -22,8 +22,6 @@ spec:
           env:
             - name: FB_BASEURL
               value: /filebrowser-demo-service
-            - name: FB_CONFIG
-              value: "/etc/filebrowser/filebrowser.json"
           volumeMounts:
             - name: storage
               mountPath: /srv
